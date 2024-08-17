@@ -4,12 +4,21 @@ html {
 
 body {    
     font-family: "Raleway", sans-serif;
+    font-size: 18px;
     font-weight: 600;
     color: black;
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     padding: 25px;
-    background-color: #918b76   
+    background-color: #b4b0a2
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6em; 
 }
 
 #me-img {
@@ -20,8 +29,19 @@ body {
 }
 
 #daily-comment {
-    padding-bottom: 20px;
+    padding-top: 100px;
+    text-align: right;
     border-bottom: 1px solid #434a42;
+}
+
+a:link, a:visited {
+  color: brown;
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  color: dodgerblue;
+  text-decoration: none;
 }
 
 .topnav {
@@ -49,6 +69,6 @@ body {
   }
 
   .topnav a.active {
-    background-color: #e1ca96;
+    background-color: #ddd;
     color: black;
   }

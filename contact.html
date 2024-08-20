@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c83e77bb45.js" crossorigin="anonymous" defer></script>
     <title>My Personal Site</title>
 </head>
 <body>
 
     <header>        
-        <script src="https://kit.fontawesome.com/c83e77bb45.js" crossorigin="anonymous"></script>
-        <div class="topnav">
+        <nav class="topnav">
             <a href="index.html">Home</a>
             <a href="about.html">About Me</a>
             <a href="projects.html">Projects</a>
             <a href="achievements.html">Achievements</a>
             <a class="active" href="contact.html">Contact</a>              
-        </div>
+        </nav>
         <div id="header">
             <div>
                 <h1>Contact Me</h1>
@@ -34,7 +34,7 @@
     </header>
 
     <main>
-        <section>    
+        <section class="top">    
             <h3>Various Places Where I Hang Out</h3>  
             <p>
                 <a href="https://x.com/nerdy_patriot" target="_blank"><img src="images/x.png" alt="Twitter X icon"></a>
@@ -42,14 +42,60 @@
                 <a href="https://www.freecodecamp.org/nerdypatriot" target="_blank"><img src="images/freecodecamp.png" alt="Free Code Camp icon"></a>                
                 <a href="https://www.linkedin.com/in/toniahardeman/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn icon"></a>
             </p>
-
-        <h3></h3>
-            <p></p>
+        </section>
+        <section class="side">    
+            <h3>Would you like to contact me directly?</h3>
+            <p id="bottom-pad">Send me an email.<br>I'll reply within 24 hours.</p><hr>
+            <div class="contact">
+                <form id="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name...">
+                    <br>    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email...">
+                    <br>    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write something..."></textarea>
+                  
+                    <input type="submit" value="Submit">                  
+                </form>
+            </div>
+        </section>
+        <section class="main-bottom">
+            <div id="copyright">
+                <p>toniahardeman.com | copyright 2024 | All rights reserved</p>
+            </div>
+            <div id="social-connect">
+                <p><a href="https://x.com/nerdy_patriot">X | </a><a href="https://github.com/ToniaHardeman">Github | </a><a href="https://www.freecodecamp.org/nerdypatriot">Free Code Camp | </a><a href="https://www.linkedin.com/in/toniahardeman/">LinkedIn</a></p>
+            </div>
         </section>
     </main>
-    <footer>
-
-    </footer>
     
+    <script src="https://cdn.emailjs.com/sdk/2.5.2/email.min.js"></script>
+    <script>
+        emailjs.init('service_5yykn5p');
+    </script>
+    <script>
+        const form = document.getElementById('contact-form');
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+        
+          const formData = new FormData(form);
+          const templateParams = {
+            from_name: formData.get('name'),
+            from_email: formData.get('email'),
+            message: formData.get('message'),
+          };
+        
+          emailjs.send('service_5yykn5p', 'template_9cq2kui', templateParams)
+            .then((response) => {
+              console.log('Email sent successfully!');
+            })
+            .catch((error) => {
+              console.error('Error sending email:', error);
+            });
+        });
+    </script>
 </body>
-</html>
+</html> 

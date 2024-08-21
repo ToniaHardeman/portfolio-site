@@ -53,6 +53,10 @@ section {
   border-bottom: 1px solid #434a42;
 }
 
+#contact {
+  margin: 30px 0;
+}
+
 #copyright, #social-connect {
   font-size: 14px;
 }

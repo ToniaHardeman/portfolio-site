@@ -21,34 +21,27 @@
             <a href="achievements.html">Achievements</a>
             <a class="active" href="contact.html">Contact</a>              
         </nav>
-        <div id="header">
-            <div>
-                <h1>Contact Me</h1>
-                <img id="me-img" src="images/me-img.png" alt="A headshot of Tonia Hardeman."> 
-            </div>
-            <div id="daily-comment">
-                <h2></h2>
-                <p></p>
-            </div>
-        </div>
     </header>
 
     <main>
-        <section class="top">    
-            <h3>Various Places Where I Hang Out</h3>  
-            <p>
-                <a href="https://x.com/nerdy_patriot" target="_blank"><img src="images/x.png" alt="Twitter X icon"></a>
-                <a href="https://github.com/ToniaHardeman" target="_blank"><img src="images/github.png" alt="Github icon"></a>
-                <a href="https://www.freecodecamp.org/nerdypatriot" target="_blank"><img src="images/freecodecamp.png" alt="Free Code Camp icon"></a>                
-                <a href="https://www.linkedin.com/in/toniahardeman/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn icon"></a>
-            </p>
-        </section>
-        <section class="side">    
-            <h3>Would you like to contact me directly?</h3>
-            <p id="bottom-pad">Send me an email.<br>I'll reply within 24 hours.</p><hr>
-            <div class="contact">
+        <div class="contact-top"> 
+            <div>
+                <h1>Contact Me</h1>
+                <img class="me-img" src="images/me-img.png" alt="A headshot of Tonia Hardeman."> 
+                <h3>Various Places Where I Hang Out</h3>  
+                <p>
+                    <a href="https://x.com/nerdy_patriot" target="_blank"><img src="images/x.png" alt="Twitter X icon"></a>
+                    <a href="https://github.com/ToniaHardeman" target="_blank"><img src="images/github.png" alt="Github icon"></a>
+                    <a href="https://www.freecodecamp.org/nerdypatriot" target="_blank"><img src="images/freecodecamp.png" alt="Free Code Camp icon"></a>                
+                    <a href="https://www.linkedin.com/in/toniahardeman/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn icon"></a>
+                </p>
+            
+                <h3>Would you like to contact me directly?</h3>
+                <p id="bottom-pad">Send me an email.<br>I'll reply within 24 hours.</p>
+            </div>
 
-                <form id="contact-form" action="contact.php" method="post">
+            <div class="contact">
+                <form action="contact.php" method="post">
                     <h2 id="contact">The Magic Contact Form</h2>
                     <p><label>Name:</label> <input name="name" type="text" /></p>
                     <p><label>Email:</label> <input name="email" type="email" /></p>
@@ -56,15 +49,16 @@
                     <p><input type="submit" value="Send" /></p>
                 </form>
             </div>
-        </section>
-        <section class="main-bottom">
-            <div id="copyright">
+        </div>
+
+        <div class="main-bottom">
+            <div class="copyright">
                 <p>toniahardeman.com | Copyright 2024 | All rights reserved.</p>
             </div>
-            <div id="social-connect">
+            <div class="social-connect">
                 <p><a href="https://x.com/nerdy_patriot">X | </a><a href="https://github.com/ToniaHardeman">Github | </a><a href="https://www.freecodecamp.org/nerdypatriot">Free Code Camp | </a><a href="https://www.linkedin.com/in/toniahardeman/">LinkedIn</a></p>
             </div>
-        </section>
+        </div>
     </main>
     
 </body>

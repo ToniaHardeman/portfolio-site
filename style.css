@@ -91,6 +91,14 @@ a:hover, a:focus {
   flex-wrap: wrap;
 }
 
+.social {
+  padding: 0 8px; 
+}
+
+.social:hover {
+  transform: rotate(20deg);
+}
+
 .contact {
   flex: 1;
   border-radius: 5px;
